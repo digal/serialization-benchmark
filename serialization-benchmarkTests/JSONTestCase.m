@@ -36,7 +36,7 @@
 - (void)testMGMsgPackSerializing {
     NSError* error = nil;
     
-    NSString* sessionName = @"mp(official)";
+    NSString* sessionName = @"mp(gabriel)";
     
     MGBenchStart(sessionName);
     

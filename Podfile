@@ -16,8 +16,6 @@ pod 'MsgPackSerialization', :head
 
 pod 'MPMessagePack', '1.0.9'
 
-target 'serialization-benchmarkTests', :exclusive => true do
-    link_with 'serialization-benchmarkTests'
+pod 'JBChartView', '2.8.10'
 
-    pod 'MD5Digest', '0.1.0'
-end
+pod 'MD5Digest', '0.1.0'

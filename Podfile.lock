@@ -1,5 +1,6 @@
 PODS:
   - cmp (10)
+  - JBChartView (2.8.10)
   - Mantle (1.5.4):
     - Mantle/extobjc (= 1.5.4)
   - Mantle/extobjc (1.5.4)
@@ -12,6 +13,7 @@ PODS:
   - MsgPackSerialization (HEAD based on 0.0.1)
 
 DEPENDENCIES:
+  - JBChartView (= 2.8.10)
   - Mantle (= 1.5.4)
   - MD5Digest (= 0.1.0)
   - MessagePack (= 1.0.0)
@@ -26,6 +28,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   cmp: 8a78832503959fc080d835a99568bbd3e32a9b8c
+  JBChartView: 50b221ef68d0934f5aea417a369a5b02167848a9
   Mantle: d5fbaf30fbc58031223af13812c060e15934a1fe
   MD5Digest: 058b7162b1fc8c30feddf10bfe66e0565797c45f
   MessagePack: c55b65c05ad745847208d9809a4419afb8149f59
