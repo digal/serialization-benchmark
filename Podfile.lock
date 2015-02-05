@@ -1,0 +1,37 @@
+PODS:
+  - cmp (10)
+  - Mantle (1.5.4):
+    - Mantle/extobjc (= 1.5.4)
+  - Mantle/extobjc (1.5.4)
+  - MD5Digest (0.1.0)
+  - MessagePack (1.0.0)
+  - MessagePackCoder (0.1.1):
+    - cmp (~> 10)
+  - MGBenchmark (HEAD based on 0.3.0)
+  - MPMessagePack (1.0.9)
+  - MsgPackSerialization (HEAD based on 0.0.1)
+
+DEPENDENCIES:
+  - Mantle (= 1.5.4)
+  - MD5Digest (= 0.1.0)
+  - MessagePack (= 1.0.0)
+  - MessagePackCoder (from `https://raw.githubusercontent.com/VoltMobi/messagepackcoder/master/MessagePackCoder.podspec`)
+  - MGBenchmark (HEAD)
+  - MPMessagePack (= 1.0.9)
+  - MsgPackSerialization (HEAD)
+
+EXTERNAL SOURCES:
+  MessagePackCoder:
+    :podspec: https://raw.githubusercontent.com/VoltMobi/messagepackcoder/master/MessagePackCoder.podspec
+
+SPEC CHECKSUMS:
+  cmp: 8a78832503959fc080d835a99568bbd3e32a9b8c
+  Mantle: d5fbaf30fbc58031223af13812c060e15934a1fe
+  MD5Digest: 058b7162b1fc8c30feddf10bfe66e0565797c45f
+  MessagePack: c55b65c05ad745847208d9809a4419afb8149f59
+  MessagePackCoder: 6c60528c8ceb20ffbc2a64b1672bbed0a568eb17
+  MGBenchmark: 15ee862dead00b1b560e96f50d58c6b29d122d20
+  MPMessagePack: 5f7a3be352856ae5dbe2ca7b76ff3642d578be06
+  MsgPackSerialization: f7f3096d359f076bb0891a4382e081891d2b7341
+
+COCOAPODS: 0.35.0

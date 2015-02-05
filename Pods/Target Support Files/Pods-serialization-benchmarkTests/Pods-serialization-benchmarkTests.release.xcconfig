@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/MD5Digest" "${PODS_ROOT}/Headers/Public/MGBenchmark" "${PODS_ROOT}/Headers/Public/MPMessagePack" "${PODS_ROOT}/Headers/Public/Mantle" "${PODS_ROOT}/Headers/Public/MessagePack" "${PODS_ROOT}/Headers/Public/MessagePackCoder" "${PODS_ROOT}/Headers/Public/MsgPackSerialization" "${PODS_ROOT}/Headers/Public/cmp"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/MD5Digest" -isystem "${PODS_ROOT}/Headers/Public/MGBenchmark" -isystem "${PODS_ROOT}/Headers/Public/MPMessagePack" -isystem "${PODS_ROOT}/Headers/Public/Mantle" -isystem "${PODS_ROOT}/Headers/Public/MessagePack" -isystem "${PODS_ROOT}/Headers/Public/MessagePackCoder" -isystem "${PODS_ROOT}/Headers/Public/MsgPackSerialization" -isystem "${PODS_ROOT}/Headers/Public/cmp"
+OTHER_LDFLAGS = -ObjC -l"Pods-serialization-benchmarkTests-MD5Digest"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods
