@@ -10,6 +10,7 @@
 
 @interface TestData : NSObject
 
++ (NSDictionary*) simpleTestData;
 + (NSDictionary*) testData;
 
 @end

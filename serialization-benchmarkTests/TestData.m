@@ -10,6 +10,10 @@
 #import <MD5Digest/NSString+MD5.h>
 @implementation TestData
 
++ (NSDictionary *)simpleTestData {
+    return @{@"string": @"lorem ipsum", @"number": @42};
+}
+
 + (NSDictionary *)testData {
     NSMutableDictionary* dict = [NSMutableDictionary dictionary];
     

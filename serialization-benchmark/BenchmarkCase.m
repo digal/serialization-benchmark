@@ -14,10 +14,11 @@
 
 @implementation BenchmarkCase
 
-- (instancetype)initWithName:(NSString*)name
+- (instancetype)initWithName:(NSString*)name color:(UIColor*)color
 {
     self = [super init];
     if (self) {
+        _color = color;
         _name = name;
     }
     return self;

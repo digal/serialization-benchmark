@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class UIColor;
 
 typedef NSData*(^SerializeBlock)(NSDictionary* dict);
 typedef NSDictionary*(^DeserializeBlock)(NSData* data);
@@ -21,9 +22,10 @@ typedef NSDictionary*(^DeserializeBlock)(NSData* data);
 
 @interface BenchmarkCase : NSObject
 
-- (instancetype)initWithName:(NSString*)name;
+- (instancetype)initWithName:(NSString*)name color:(UIColor*)color;
 
 @property (nonatomic, readonly) NSString* name;
+@property (nonatomic, readonly) UIColor* color;
 @property (nonatomic, copy) SerializeBlock serializeBlock;
 @property (nonatomic, copy) DeserializeBlock deserializeBlock;
 

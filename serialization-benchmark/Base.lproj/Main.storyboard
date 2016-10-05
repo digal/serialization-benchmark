@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBV-Qj-yYa" customClass="JBBarChartView">
-                                <rect key="frame" x="16" y="20" width="568" height="470"/>
+                                <rect key="frame" x="16" y="27.5" width="568" height="452.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="65" width="400" height="364"/>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bya-QN-jqx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bya-QN-jqx">
                                 <rect key="frame" x="16" y="571" width="91" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -34,7 +34,7 @@
                                     <rect key="frame" x="16" y="571" width="91" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oed-lP-Tf3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oed-lP-Tf3">
                                 <rect key="frame" x="540" y="571" width="44" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -44,8 +44,8 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwm-np-aI7">
-                                <rect key="frame" x="284" y="510" width="33" height="30"/>
-                                <state key="normal" title="RUN">
+                                <rect key="frame" x="162.5" y="510" width="135" height="30"/>
+                                <state key="normal" title="RUN (small sample)">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -55,30 +55,63 @@
                                     <action selector="runTest:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="50c-1L-41P"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNK-pv-WFj">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="342" y="571" width="44" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPh-HE-eLc">
+                                <rect key="frame" x="310" y="510" width="120" height="30"/>
+                                <state key="normal" title="RUN (big sample)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="184" y="499" width="33" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="runTest:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uTL-Hp-2tH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tBV-Qj-yYa" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="20" id="7Cc-Ua-Lc8"/>
-                            <constraint firstItem="Nwm-np-aI7" firstAttribute="top" secondItem="tBV-Qj-yYa" secondAttribute="bottom" constant="20" id="OL3-M1-KF3"/>
+                            <constraint firstItem="vPh-HE-eLc" firstAttribute="centerY" secondItem="Nwm-np-aI7" secondAttribute="centerY" id="Eig-S1-gf2"/>
+                            <constraint firstItem="Nwm-np-aI7" firstAttribute="top" secondItem="tBV-Qj-yYa" secondAttribute="bottom" constant="30" id="OL3-M1-KF3"/>
+                            <constraint firstAttribute="centerX" secondItem="vPh-HE-eLc" secondAttribute="centerX" constant="-70" id="QWJ-6m-4X2"/>
+                            <constraint firstItem="tBV-Qj-yYa" firstAttribute="top" secondItem="XNK-pv-WFj" secondAttribute="bottom" constant="7.5" id="UFw-fe-XQe"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Nwm-np-aI7" secondAttribute="bottom" constant="60" id="cnI-cP-uoU"/>
                             <constraint firstItem="tBV-Qj-yYa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="eIb-eh-QKr"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="oed-lP-Tf3" secondAttribute="bottom" constant="8" id="efA-kh-ucF"/>
+                            <constraint firstItem="XNK-pv-WFj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="fxN-7Q-JK0"/>
                             <constraint firstItem="oed-lP-Tf3" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="lPl-Rw-Ptc"/>
                             <constraint firstItem="bya-QN-jqx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="oC9-Tm-EW7"/>
-                            <constraint firstAttribute="centerX" secondItem="Nwm-np-aI7" secondAttribute="centerX" id="oit-2O-p4R"/>
+                            <constraint firstAttribute="centerX" secondItem="Nwm-np-aI7" secondAttribute="centerX" constant="70" id="oit-2O-p4R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tBV-Qj-yYa" secondAttribute="trailing" id="q53-hB-5mh"/>
+                            <constraint firstAttribute="centerX" secondItem="XNK-pv-WFj" secondAttribute="centerX" id="u2O-jh-UC9"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="bya-QN-jqx" secondAttribute="bottom" constant="8" id="zjE-kD-jp1"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7Cc-Ua-Lc8"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="barChart" destination="tBV-Qj-yYa" id="n86-n1-QBT"/>
                         <outlet property="iterationLabel" destination="oed-lP-Tf3" id="tId-Dd-FXU"/>
+                        <outlet property="runBigTestBtn" destination="vPh-HE-eLc" id="3UA-dw-h8t"/>
+                        <outlet property="runSmallTestBtn" destination="Nwm-np-aI7" id="QYo-fg-Ep3"/>
                         <outlet property="testNameLabel" destination="bya-QN-jqx" id="g87-YS-Yah"/>
+                        <outlet property="titleLabel" destination="XNK-pv-WFj" id="FPH-ib-2uZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="235"/>
+            <point key="canvasLocation" x="439" y="235.5"/>
         </scene>
     </scenes>
 </document>

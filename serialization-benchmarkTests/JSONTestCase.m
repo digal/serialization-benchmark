@@ -10,7 +10,7 @@
 #import "TestData.h"
 #import <MGBenchmark/MGBenchmark.h>
 #import <MGBenchmark/MGBenchmarkSession.h>
-#import <MessagePack/MessagePack.h>
+#import <msgpack/MessagePack.h>
 #import <MessagePackCoder/MsgPackArchiver.h>
 #import <MessagePackCoder/MsgPackUnarchiver.h>
 #import <MsgPackSerialization/MsgPackSerialization.h>
