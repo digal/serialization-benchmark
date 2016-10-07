@@ -14,8 +14,9 @@
 
 #import <MessagePackCoder/MsgPackArchiver.h>
 #import <MessagePackCoder/MsgPackUnarchiver.h>
-#import <MsgPackSerialization/MsgPackSerialization.h>
+//#import <MsgPackSerialization/MsgPackSerialization.h>
 #import <MPMessagePack/MPMessagePack.h>
+#import <MPackObjc/MPackObjc.h>
 #import <JBChartView/JBBarChartView.h>
 #import "BenchmarkCase.h"
 
@@ -76,18 +77,29 @@
     gabrielCase.deserializeBlock = ^NSDictionary*(NSData *data) {
         return [MPMessagePackReader readData:data error:nil];
     };
+
+    BenchmarkCase *mpackCase = [[BenchmarkCase alloc] initWithName:@"mpack" color:[UIColor purpleColor]];
     
-    BenchmarkCase *matttCase = [[BenchmarkCase alloc] initWithName:@"mattt" color:[UIColor orangeColor]];
-    
-    matttCase.serializeBlock = ^NSData*(NSDictionary *dict) {
-        return [MsgPackSerialization dataWithMsgPackObject:dict options:0 error:nil];
+    mpackCase.serializeBlock = ^NSData*(NSDictionary *dict) {
+        return [dict mpo_messagePackData];
     };
     
-    matttCase.deserializeBlock = ^NSDictionary*(NSData *data) {
-        return [MsgPackSerialization MsgPackObjectWithData:data options:0 error:nil];
+    mpackCase.deserializeBlock = ^NSDictionary*(NSData *data) {
+        return [data mpo_parseMessagePackData];
     };
-    
-    return @[jsonCase, coderCase, msgpackCase, gabrielCase, matttCase];
+
+//    BenchmarkCase *matttCase = [[BenchmarkCase alloc] initWithName:@"mattt" color:[UIColor orangeColor]];
+//    
+//    matttCase.serializeBlock = ^NSData*(NSDictionary *dict) {
+//        return [MsgPackSerialization dataWithMsgPackObject:dict options:0 error:nil];
+//    };
+//    
+//    matttCase.deserializeBlock = ^NSDictionary*(NSData *data) {
+//        return [MsgPackSerialization MsgPackObjectWithData:data options:0 error:nil];
+//    };
+//    
+//    return @[jsonCase, coderCase, msgpackCase, gabrielCase, matttCase];
+    return @[jsonCase, coderCase, msgpackCase, gabrielCase, mpackCase];
 }
 
 - (IBAction)runTest:(UIButton*)sender {

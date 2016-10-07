@@ -1,54 +1,52 @@
 PODS:
   - cmp (10)
+  - GHODictionary (1.1.0)
   - JBChartView (2.8.10)
-  - Mantle (1.5.4):
-    - Mantle/extobjc (= 1.5.4)
-  - Mantle/extobjc (1.5.4)
+  - Mantle (2.0.7):
+    - Mantle/extobjc (= 2.0.7)
+  - Mantle/extobjc (2.0.7)
   - MD5Digest (0.1.0)
   - MessagePackCoder (0.1.1):
     - cmp (~> 10)
   - MGBenchmark (0.3.0)
-  - MPMessagePack (1.0.9)
-  - msgpack (0.1.3)
-  - MsgPackSerialization (0.0.2)
+  - MPackObjc (0.0.1)
+  - MPMessagePack (1.3.12):
+    - GHODictionary
+  - msgpack (0.1.8)
 
 DEPENDENCIES:
   - JBChartView (= 2.8.10)
-  - Mantle (= 1.5.4)
+  - Mantle (= 2.0.7)
   - MD5Digest (= 0.1.0)
   - MessagePackCoder (from `https://raw.githubusercontent.com/VoltMobi/messagepackcoder/master/MessagePackCoder.podspec`)
   - MGBenchmark (from `https://github.com/MattesGroeger/MGBenchmark`)
-  - MPMessagePack (= 1.0.9)
-  - msgpack (= 0.1.3)
-  - MsgPackSerialization (from `https://github.com/mattt/MsgPackSerialization`)
+  - MPackObjc (= 0.0.1)
+  - MPMessagePack (= 1.3.12)
+  - msgpack (= 0.1.8)
 
 EXTERNAL SOURCES:
   MessagePackCoder:
     :podspec: https://raw.githubusercontent.com/VoltMobi/messagepackcoder/master/MessagePackCoder.podspec
   MGBenchmark:
     :git: https://github.com/MattesGroeger/MGBenchmark
-  MsgPackSerialization:
-    :git: https://github.com/mattt/MsgPackSerialization
 
 CHECKOUT OPTIONS:
   MGBenchmark:
     :commit: 255a9162f4e495b6cf9fc0a07e3274a0d94a48f9
     :git: https://github.com/MattesGroeger/MGBenchmark
-  MsgPackSerialization:
-    :commit: 17c0b9aaf645d18ea3d805fd4c00af1a0e833157
-    :git: https://github.com/mattt/MsgPackSerialization
 
 SPEC CHECKSUMS:
   cmp: dfd6dcfef30680dc2e37324366bd35dfbe7d051a
+  GHODictionary: 225e042596a4b3d5b66b2b24250086b2f95514af
   JBChartView: 187186c4730d806962da8ba99aa0d03a77aa35f7
-  Mantle: 60acd0cd363e27d945bda0a6b8e90577112d28f3
+  Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
   MD5Digest: 99bcccfc389c5b7a0edaf66beb80fbc7596a3b65
   MessagePackCoder: ab7b84e313cec7f46fe935f090d06a7117e17ad7
   MGBenchmark: 86d5338b9fa58b8c94c5969d02d5862822fdf0f9
-  MPMessagePack: 7ac1ea9fcf9dc144f5e040b4162362ea8a0cb5fd
-  msgpack: 379200c227158b5823b79ac08ff00c2150b7d6d0
-  MsgPackSerialization: 423cbc886aec7cef9e036d6d2c98b63e250921d9
+  MPackObjc: 5efc3c80dc4911c26498cafca4fa2f176b99bc5e
+  MPMessagePack: '078f8c3aed25079bac89003391fdb71f44bcf37a'
+  msgpack: 97491d2ea799408f4694f2c7d7fd79baf77853dd
 
-PODFILE CHECKSUM: 89c8fdb88e3e1b9dc93bf51ec510910f548dd3f9
+PODFILE CHECKSUM: 4cf0e3aab5818e8d1d6ebc5a5e6d9488ba08ec71
 
 COCOAPODS: 1.0.1
